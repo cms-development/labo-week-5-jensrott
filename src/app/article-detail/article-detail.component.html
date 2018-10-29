@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="container">
+  <h2>Article detail</h2>
+  <div class="card" *ngIf="article">
+    <div [innerHTML]="article?.data.attributes.title"></div>
+    <div [innerHTML]="article?.data.attributes.body.value"></div>
+
+  </div>
+  <div class="link-container">
+    <a routerLink="/articles"><span class="fa fa-arrow-left"></span></a>
+  </div>
+</div>

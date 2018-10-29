@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container">
+  <form (ngSubmit)="editArticle(article.data.attributes.title, article.data.attributes.body.value)">
+    <div class="form-group">
+      <label for="InputTitle">Title</label>
+      <input type="text" class="form-control" id="InputTitle" placeholder="Enter title" name="title" value="article.data.attributes.title"
+        [(ngModel)]="article.data.attributes.title">
+      <small id="titleHelp" class="form-text text-muted">Give your article a title.</small>
+    </div>
+    <div class="form-group">
+      <label for="InputText">Text</label>
+      <input type="text" class="form-control" id="InputText" placeholder="Enter text" name="text" value="article.data.attributes.body.value"
+        [(ngModel)]="article.data.attributes.body.value">
+      <small id="titleHelp" class="form-text text-muted">Text for your article.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

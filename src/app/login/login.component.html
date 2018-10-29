@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Log In</h5>
+          <form class="form-signin" (ngSubmit)="login(user.username, user.password)">
+            <div class="form-label-group">
+              <input type="text" id="username" class="form-control" placeholder="Username" required autofocus type="text"
+                name="username" [(ngModel)]="user.username">
+            </div>
+            <div class="form-label-group">
+              <input type="password" id="password" class="form-control" placeholder="Password" name="password"
+                [(ngModel)]="user.password">
+            </div>
+            <div class="form-label-group">
+
+            </div>
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Log in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

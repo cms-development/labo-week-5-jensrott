@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+a {
+  background: #c2bfbf;
+  padding: 2rem;
+  border-radius: 1rem;
+  list-style: none;
+}

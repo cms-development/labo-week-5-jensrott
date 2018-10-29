@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="container">
+  <h2>My Articles</h2>
+  <div class="articles" *ngIf="articles">
+    <div class="card" *ngFor="let article of articles">
+      <div class="content-container">
+        <div [innerHTML]="article?.attributes.title"></div>
+        <div [innerHTML]="article?.attributes.body.value"></div>
+      </div>
+      <div class="actions-container">
+        <a routerLink="/article/detail/{{article.id}}"><span class="fa fa-info-circle"></span></a>
+        <a routerLink="/article/edit/{{article.id}}"><span class="fa fa-edit"></span></a>
+        <a (click)="deleteArticle(article.id)"><span class="fa fa-trash"></span></a>
+      </div>
+    </div>
+  </div>
+
+  <a [routerLink]="['/create-articles']">Add</a>
+</div>
